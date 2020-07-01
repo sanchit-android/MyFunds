@@ -1,0 +1,18 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">1dp</dimen>
+    <dimen name="activity_horizontal_margin">1dp</dimen>
+    <dimen name="synopsis_rectangle_curve_radius">14dp</dimen>
+    <dimen name="cards_mf_trade_text_size">15sp</dimen>
+
+    <dimen name="synopsis1_box_name">13sp</dimen>
+    <dimen name="synopsis1_box_winner_name">18sp</dimen>
+    <dimen name="synopsis1_box_data">15sp</dimen>
+
+    <dimen name="synopsis2_box_header">12sp</dimen>
+    <dimen name="synopsis2_box_name">20sp</dimen>
+    <dimen name="synopsis2_box_data">15sp</dimen>
+
+    <dimen name="mf_data_listing_name">16sp</dimen>
+    <dimen name="mf_data_listing_header">13sp</dimen>
+</resources>

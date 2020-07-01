@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/trades_card_view"
+    android:layout_gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="0.5dp"
+    card_view:cardBackgroundColor="@color/color_white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:weightSum="5"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/fund_purchase_date"
+            android:layout_width="0dp"
+            android:layout_weight="1.2"
+            android:layout_height="wrap_content"
+            android:textColor="@color/cards_mf_trade_text_color"
+            android:textSize="@dimen/cards_mf_trade_text_size"
+            android:textStyle="bold"
+            android:gravity="left"
+            android:text="2020-01-13" />
+
+        <TextView
+            android:id="@+id/fund_purchase_side"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/cards_mf_trade_text_color"
+            android:textSize="@dimen/cards_mf_trade_text_size"
+            android:gravity="left"
+            android:layout_weight="1"
+            android:text="Buy" />
+
+        <TextView
+            android:id="@+id/fund_quantity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:gravity="right"
+            android:text="100"
+            android:textColor="@color/cards_mf_trade_text_color"
+            android:textSize="@dimen/cards_mf_trade_text_size" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/fund_purchase_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/cards_mf_trade_text_color"
+                android:textSize="@dimen/cards_mf_trade_text_size"
+                android:text="210.86" />
+
+            <TextView
+                android:id="@+id/fund_investment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/cards_mf_trade_text_color"
+                android:textSize="@dimen/cards_mf_trade_text_size"
+                android:text="10,543.0" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/fund_valuation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="1dp"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:text="11,125.6"
+            android:textColor="@color/cards_mf_trade_text_color"
+            android:textSize="@dimen/cards_mf_trade_text_size"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

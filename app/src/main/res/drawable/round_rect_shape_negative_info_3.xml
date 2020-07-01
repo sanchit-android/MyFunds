@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <corners
+        android:bottomLeftRadius="@dimen/synopsis_rectangle_curve_radius"
+        android:bottomRightRadius="@dimen/synopsis_rectangle_curve_radius"
+        android:topLeftRadius="@dimen/synopsis_rectangle_curve_radius"
+        android:topRightRadius="@dimen/synopsis_rectangle_curve_radius" />
+
+    <solid android:color="@color/negative_3" />
+
+</shape>

@@ -1,0 +1,67 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorSecondary">@color/colorSecondary</item>
+
+        <item name="android:textViewStyle">@style/RobotoTextViewStyle</item>
+        <item name="android:buttonStyle">@style/RobotoButtonStyle</item>
+        <item name="android:autoCompleteTextViewStyle">@style/RobotoAutoCompleteTextViewStyle</item>
+        <item name="android:datePickerStyle">@style/MyTimePickerDialogTheme</item>
+
+        <item name="android:editTextColor">@color/colorSecondary</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="MyTimePickerDialogTheme" parent="@style/Theme.AppCompat.Light.Dialog">
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="RobotoTextViewStyle" parent="android:Widget.TextView">
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:textSize">15dp</item>
+    </style>
+
+    <style name="RobotoAutoCompleteTextViewStyle" parent="android:Widget.AutoCompleteTextView">
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+
+    <style name="RobotoButtonStyle" parent="android:Widget.Holo.Button">
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+
+    <style name="FullscreenTheme" parent="AppTheme">
+        <item name="android:actionBarStyle">@style/FullscreenActionBarStyle</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="metaButtonBarStyle">?android:attr/buttonBarStyle</item>
+        <item name="metaButtonBarButtonStyle">?android:attr/buttonBarButtonStyle</item>
+    </style>
+
+    <style name="FullscreenActionBarStyle" parent="Widget.AppCompat.ActionBar">
+        <item name="android:background">@color/black_overlay</item>
+    </style>
+
+    <!--
+    android:fontFamily="sans-serif"           // roboto regular
+    android:fontFamily="sans-serif-light"     // roboto light
+    android:fontFamily="sans-serif-condensed" // roboto condensed
+    android:fontFamily="sans-serif-black"     // roboto black
+    android:fontFamily="sans-serif-thin"      // roboto thin (android 4.2)
+    android:fontFamily="sans-serif-medium"    // roboto medium (android 5.0)
+    -->
+
+</resources>

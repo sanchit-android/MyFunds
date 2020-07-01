@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ffffff</color>
+    <color name="colorPrimaryDark">#424242</color>
+    <color name="colorSecondary">#F48FB1</color>
+    <color name="colorSecondaryDark">#C2185B</color>
+    <color name="colorAccent">#9E9E9E</color>
+    <color name="grey_300">#cccccc</color>
+    <color name="grey_999">#999999</color>
+    <color name="black">#000000</color>
+    <color name="grey_dark_4">#444444</color>
+    <color name="color_white">#ffffff</color>
+
+    <color name="black_overlay">#66000000</color>
+
+    <!-- rectangle colors -->
+    <color name="purple_800">#6A1B9A</color>
+    <color name="purple_50">#F3E5F5</color>
+    <color name="blue_800">#1565C0</color>
+    <color name="teal_800">#00695C</color>
+    <color name="teal_A700">#00BFA5</color>
+    <color name="orange_800">#ee6002</color>
+    <color name="red_A700">#D50000</color>
+    <color name="red_A400">#FF1744</color>
+    <color name="red_2">#b71c1c</color>
+    <color name="green_800">#2E7D32</color>
+
+    <!--color name="positive_1">#26A69A</color>
+    <color name="positive_2">#4DB6AC</color>
+    <color name="positive_3">#80CBC4</color>
+    <color name="positive_4">#B2DFDB</color-->
+    <color name="positive_1">#B2DFDB</color>
+    <color name="positive_2">#80CBC4</color>
+    <color name="positive_3">#4DB6AC</color>
+    <color name="positive_4">#26A69A</color>
+    <color name="positive_text_1">#222222</color>
+
+    <color name="negative_1">#78909C</color>
+    <color name="negative_2">#90A4AE</color>
+    <color name="negative_3">#B0BEC5</color>
+    <color name="negative_4">#CFD8DC</color>
+    <color name="negative_text_1">#222222</color>
+    <color name="negative_text_2">#ffffff</color>
+
+    <color name="summary_1">#424242</color>
+    <color name="summary_text_1">#ffffff</color>
+
+    <color name="cards_mf_trade_text_color">#000000</color>
+
+    <color name="synopsis2_box_header">#222222</color>
+
+    <!-- mf data listing -->
+    <color name="mf_data_listing_summary_bg">#ffffff</color>
+    <color name="mf_data_listing_summary_text">#222222</color>
+    <color name="mf_data_listing_name">#171717</color>
+    <color name="mf_data_listing_part1">#171717</color>
+    <color name="mf_data_listing_part2">#171717</color>
+    <color name="mf_data_listing_part3">#171717</color>
+    <color name="mf_data_listing_positive">#07BA52</color>
+    <color name="mf_data_listing_negative">#E53935</color>
+
+    <color name="mf_data_listing_header_text">#757474</color>
+    <color name="mf_data_listing_header_bg">#FFFFFF</color>
+    <color name="mf_data_listing_header_line">#DDDADA</color>
+    <color name="mf_data_listing_alternate_row">#E2F0F3</color>
+
+    <color name="mf_suggestion1_green">#66BB6A</color>
+    <color name="mf_suggestion1_neutral">#BDBDBD</color>
+    <color name="mf_suggestion1_red">#EF5350</color>
+</resources>
