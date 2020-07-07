@@ -20,7 +20,7 @@ public class MFAnalysisModel1Header extends MFAnalysisModel1 {
         return "Fund Category";
     }
 
-    public String getPercentage() {
+    public String getContribution() {
         return "% Allocation";
     }
 

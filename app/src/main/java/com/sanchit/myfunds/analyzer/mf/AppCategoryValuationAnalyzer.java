@@ -6,7 +6,6 @@ import com.sanchit.myfunds.model.mf.MFTrade;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -28,17 +27,19 @@ public class AppCategoryValuationAnalyzer {
             categoryInfo.investment = categoryInfo.investment.add(trade.unitsAlloted.multiply(trade.transactionPrice).setScale(2, BigDecimal.ROUND_HALF_DOWN));
             categoryInfo.units = categoryInfo.units.add(trade.unitsAlloted);
 
-            portfolioValuation = portfolioValuation.add(trade.unitsAlloted.multiply(trade.transactionPrice));
-            categoryInfo.valuation = new BigDecimal(0);
+            portfolioValuation = portfolioValuation.add(trade.unitsAlloted.multiply(trade.currentPrice));
+            categoryInfo.valuation = categoryInfo.valuation.add(trade.unitsAlloted.multiply(trade.currentPrice).setScale(2, BigDecimal.ROUND_HALF_DOWN));
 
             categoryInfo.getTrades().add(trade);
         }
 
         for (Map.Entry<String, MFAnalysisModel1> entry : map.entrySet()) {
             MFAnalysisModel1 categoryInfo = entry.getValue();
-            categoryInfo.percentage = categoryInfo.investment.multiply(new BigDecimal(100))
-                    .divide(portfolioValuation, 2, BigDecimal.ROUND_HALF_DOWN)
-                    .toPlainString() + "%";
+            categoryInfo.contribution = categoryInfo.investment.multiply(new BigDecimal(100))
+                    .divide(portfolioValuation, 2, BigDecimal.ROUND_HALF_DOWN);
+
+            categoryInfo.returns = (categoryInfo.valuation.subtract(categoryInfo.investment)).multiply(new BigDecimal(100))
+                    .divide(categoryInfo.investment, 2, BigDecimal.ROUND_HALF_DOWN);
         }
 
         ArrayList<MFAnalysisModel1> result = new ArrayList<>(map.values());

@@ -21,12 +21,12 @@ public abstract class AbstractBasicAdapter<T extends RecyclerView.ViewHolder> ex
 
     protected void setAnimation(CardView viewToAnimate, int position) {
         if (position >= lastPosition) {
-            Animation animation = AnimationUtils.loadAnimation(context, R.anim.item_animation_rise_up);
+            Animation animation = AnimationUtils.loadAnimation(context, R.anim.item_animation_enter_right);
             viewToAnimate.startAnimation(animation);
             lastPosition = position;
         }
         if (position < lastPosition) {
-            Animation animation = AnimationUtils.loadAnimation(context, R.anim.item_animation_rise_up);
+            Animation animation = AnimationUtils.loadAnimation(context, R.anim.item_animation_enter_right);
             viewToAnimate.startAnimation(animation);
             firstPosition = position;
         }

@@ -3,6 +3,7 @@ package com.sanchit.myfunds.model.mf.synopsis2.datalist.factory;
 import com.sanchit.myfunds.model.mf.MFTrade;
 import com.sanchit.myfunds.model.mf.synopsis2.AnalysisKeySourcer;
 import com.sanchit.myfunds.model.mf.synopsis2.datalist.MFDataListModel;
+import com.sanchit.myfunds.utils.Constants;
 import com.sanchit.myfunds.utils.NumberUtils;
 
 import java.math.BigDecimal;
@@ -15,12 +16,12 @@ import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-public class PerformanceBasedFactory extends AbstractFactory {
+public class MultipleDurationPerformanceFactory extends AbstractFactory {
 
     private final AnalysisKeySourcer keySourcer;
 
-    public PerformanceBasedFactory(List<MFTrade> trades, String header, AnalysisKeySourcer keySourcer) {
-        super(trades, header);
+    public MultipleDurationPerformanceFactory(List<MFTrade> trades, String header, AnalysisKeySourcer keySourcer, Map<String, Map<String, BigDecimal[]>> priceMap) {
+        super(trades, header, priceMap);
         this.keySourcer = keySourcer;
     }
 
@@ -37,7 +38,7 @@ public class PerformanceBasedFactory extends AbstractFactory {
             if (!investedMap.containsKey(key)) {
                 investedMap.put(key, new BigDecimal(0));
             }
-            BigDecimal invested = investedMap.get(key).add(trade.unitsAlloted.multiply(trade.transactionPrice).setScale(SCALE_DISPLAY, BigDecimal.ROUND_HALF_DOWN));
+            BigDecimal invested = investedMap.get(key).add(trade.unitsAlloted.multiply(priceMap.get(trade.fund.fundID).get(Constants.Duration.T_30)[1]).setScale(SCALE_DISPLAY, BigDecimal.ROUND_HALF_DOWN));
             investedMap.put(key, invested);
 
             if (!valuationMap.containsKey(key)) {
@@ -71,8 +72,8 @@ public class PerformanceBasedFactory extends AbstractFactory {
         for (Map.Entry<String, BigDecimal> entry : sortedMap.entrySet()) {
             MFDataListModel data = new MFDataListModel();
             data.setName(entry.getKey());
-            data.setPart1(NumberUtils.formatMoney(investedMap.get(entry.getKey())));
-            data.setPart2(NumberUtils.formatMoney(valuationMap.get(entry.getKey())));
+            data.setPart1("");
+            data.setPart2("");
             data.setPart3(NumberUtils.toPercentage(entry.getValue(), 2));
             result.add(data);
         }

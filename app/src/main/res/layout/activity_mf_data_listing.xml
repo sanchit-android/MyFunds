@@ -37,7 +37,7 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:layoutAnimation="@anim/layout_animation_fall_down"
+            android:layoutAnimation="@anim/layout_animation_enter_right"
             android:scrollbars="vertical" />
 
     </LinearLayout>

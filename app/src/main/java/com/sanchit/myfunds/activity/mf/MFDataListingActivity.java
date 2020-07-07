@@ -47,7 +47,7 @@ public class MFDataListingActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(layoutManager);
 
         // specify an adapter (see also next example)
-        List<MFDataListModel> dataset = AbstractFactory.getFor(header, trades).generateData();
+        List<MFDataListModel> dataset = AbstractFactory.getFor(header, trades, priceMap).generateData();
         mAdapter = new MFDataListingAdapter(this, dataset);
         recyclerView.setAdapter(mAdapter);
 

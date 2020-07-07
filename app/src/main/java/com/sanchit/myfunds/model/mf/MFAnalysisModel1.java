@@ -9,10 +9,10 @@ public class MFAnalysisModel1 {
     public String Category;
     public BigDecimal valuation;
     public BigDecimal investment;
-    public String percentage;
+    public BigDecimal contribution;
     public BigDecimal units;
 
-    public String returns;
+    public BigDecimal returns;
     public boolean updated = false;
 
     List<MFTrade> trades = new ArrayList<>();
@@ -40,8 +40,12 @@ public class MFAnalysisModel1 {
         return Category;
     }
 
-    public String getPercentage() {
-        return percentage;
+    public String getContribution() {
+        return contribution.toPlainString() + "%";
+    }
+
+    public BigDecimal getContributionRaw() {
+        return contribution;
     }
 
     public List<MFTrade> getTrades() {
@@ -53,6 +57,10 @@ public class MFAnalysisModel1 {
     }
 
     public String getReturns() {
+        return returns.toPlainString() + "%";
+    }
+
+    public BigDecimal getReturnsRaw() {
         return returns;
     }
 }

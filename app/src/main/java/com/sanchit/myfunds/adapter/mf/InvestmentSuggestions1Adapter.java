@@ -30,7 +30,7 @@ public class InvestmentSuggestions1Adapter extends AbstractBasicAdapter<Investme
     @Override
     public InvestmentSuggestions1ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View layoutView = LayoutInflater.from(parent.getContext()).inflate(
-                R.layout.cards_mf_suggestion_item, null);
+                R.layout.cards_mf_suggestion_item, parent, false);
         InvestmentSuggestions1ViewHolder rcv = new InvestmentSuggestions1ViewHolder(layoutView, context);
         return rcv;
     }

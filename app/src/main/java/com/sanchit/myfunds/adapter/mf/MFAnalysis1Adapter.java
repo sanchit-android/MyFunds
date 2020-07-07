@@ -69,7 +69,7 @@ public class MFAnalysis1Adapter extends RecyclerView.Adapter<MFAnalysis1Adapter.
 
         textViewCategoryName.setText(data.getCategory());
         textViewCategoryValuation.setText(data.getValuation());
-        textViewCategoryPerc.setText(data.getPercentage());
+        textViewCategoryPerc.setText(data.getContribution());
         textViewCategoryInvestment.setText(data.getInvestment());
         textViewCategoryReturns.setText(data.getReturns());
 
